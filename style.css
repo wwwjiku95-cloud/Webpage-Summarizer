@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+}
+
+.header {
+  background: #1a1f2e;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #2d3748;
+}
+
+.header h1 {
+  font-size: 1.1rem;
+  color: #63b3ed;
+  margin-bottom: 2px;
+}
+
+.header p {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.content {
+  padding: 1rem 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #63b3ed;
+}
+
+#summarize-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2b6cb0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#summarize-btn:hover {
+  opacity: 0.85;
+}
+
+#summarize-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #fc8181;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.error.show {
+  display: block;
+}
+
+.loading {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #718096;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #2d3748;
+  border-top-color: #63b3ed;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 0.8rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.result-box {
+  margin-top: 1rem;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.result-header span {
+  font-size: 0.82rem;
+  color: #90cdf4;
+  font-weight: 600;
+}
+
+#copy-btn {
+  padding: 3px 10px;
+  background: #276749;
+  border: none;
+  border-radius: 5px;
+  color: #9ae6b4;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+#copy-btn:hover {
+  background: #2f855a;
+}
+
+#summary-text {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-height: 250px;
+  overflow-y: auto;
+}

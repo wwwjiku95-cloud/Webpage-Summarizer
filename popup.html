@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Webpage Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1>⚡ Webpage Summarizer</h1>
+    <p>Summarize any page instantly</p>
+  </div>
+
+  <div class="content">
+
+    <label>Groq API Key</label>
+    <input
+      type="password"
+      id="api-key"
+      placeholder="Enter your Groq API key (gsk_...)"
+    />
+
+    <button id="summarize-btn">
+      🔍 Summarize This Page
+    </button>
+
+    <div id="error-msg" class="error"></div>
+
+    <div id="loading" class="loading" style="display:none">
+      <div class="spinner"></div>
+      <p>Summarizing...</p>
+    </div>
+
+    <div id="result-box" style="display:none">
+      <div class="result-header">
+        <span>📋 Summary</span>
+        <button id="copy-btn">Copy</button>
+      </div>
+      <div id="summary-text"></div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
